@@ -24,7 +24,7 @@
 ;;; Code:
 (use-package company
   :defer t
-  :diminish company-mode
+  :diminish (company-mode . " ➝")
   :defines (company-dabbrev-ignore-case
             company-dabbrev-downcase)
   :commands (global-company-mode
