@@ -135,6 +135,10 @@
             (defadvice company-capf (around bar activate)
               (ignore-errors add-do-it))
 
+            ;; Disable check buffers breaks init
+            (add-hook 'company-mode-hook
+                      (global-company-mode-check-buffers nil))
+
             ;; Add company-ispell as backend for text-mode's only
             (defun company-text-setup ()
               ;; OPTIONAL, if `company-ispell-dictionary' is nil, `ispell-complete-word-dict' is used

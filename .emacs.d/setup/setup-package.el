@@ -133,7 +133,7 @@ corresponding `.el' file."
 (use-package buttercup           :defer t)
 (use-package ctable              :defer t)
 (use-package dash                :defer t)
-(use-package dash-functional     :demand t)
+(use-package dash-functional     :defer t)
 (use-package deferred            :defer t)
 (use-package dropdown-list       :defer t)
 (use-package ebib                :defer t)
