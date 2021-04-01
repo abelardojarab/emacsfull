@@ -1,6 +1,6 @@
 ;;; setup-package.el ---                     -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2014-2020  Abelardo Jara-Berrocal
+;; Copyright (C) 2014-2021  Abelardo Jara-Berrocal
 
 ;; Author: Abelardo Jara-Berrocal <abelardojarab@gmail.com>
 ;; Keywords:
@@ -21,6 +21,12 @@
 ;;; Commentary:
 
 ;;
+
+(defun -const (c)
+  "Return a function that returns C ignoring any additional arguments.
+
+In types: a -> b -> a"
+  (lambda (&rest _) c))
 
 ;;; Code:
 
@@ -127,6 +133,7 @@ corresponding `.el' file."
 (use-package buttercup           :defer t)
 (use-package ctable              :defer t)
 (use-package dash                :defer t)
+(use-package dash-functional     :demand t)
 (use-package deferred            :defer t)
 (use-package dropdown-list       :defer t)
 (use-package ebib                :defer t)
