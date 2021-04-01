@@ -1,0 +1,2 @@
+;;; Generated package description from /home/abelardojara/workspace/emacs-config/.emacs.d/.cask/27.1/elpa/helm-pass-20210221.1655/helm-pass.el  -*- no-byte-compile: t -*-
+(define-package "helm-pass" "20210221.1655" "helm interface of pass, the standard Unix password manager" '((emacs "25") (helm "0") (password-store "0") (auth-source-pass "4.0.0")) :commit "4ce46f1801f2e76e53482c65aa0619d427a3fbf9" :authors '(("J. Alexander Branham" . "branham@utexas.edu")) :maintainer '("Pierre Neidhardt" . "mail@ambrevar.xyz") :url "https://github.com/emacs-helm/helm-pass")

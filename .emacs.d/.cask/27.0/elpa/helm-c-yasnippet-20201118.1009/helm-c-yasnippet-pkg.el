@@ -1,2 +1,0 @@
-;;; Generated package description from /home/abelardojara/workspace/emacs-config/.emacs.d/.cask/27.0/elpa/helm-c-yasnippet-20201118.1009/helm-c-yasnippet.el  -*- no-byte-compile: t -*-
-(define-package "helm-c-yasnippet" "20201118.1009" "helm source for yasnippet.el" '((emacs "25.1") (helm "1.7.7") (yasnippet "0.8.0")) :commit "28699d9a9caa8b4d37fd66368d93b6c65828c235" :keywords '("convenience" "emulation") :authors '(("Kenji.I (Kenji Imakado)" . "ken.imakaado@gmail.com")) :maintainer '("Kenji.I (Kenji Imakado)" . "ken.imakaado@gmail.com"))

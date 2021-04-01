@@ -1,2 +1,0 @@
-;;; Generated package description from /home/abelardojara/workspace/emacs-config/.emacs.d/.cask/27.0/elpa/magic-latex-buffer-20200816.648/magic-latex-buffer.el  -*- no-byte-compile: t -*-
-(define-package "magic-latex-buffer" "20200816.648" "Magically enhance LaTeX-mode font-locking for semi-WYSIWYG editing" '((cl-lib "0.5") (emacs "25.1")) :commit "8a6e33f79a930d2c1977409f1980afc4cc99b909" :authors '(("zk_phi")) :maintainer '("zk_phi") :url "http://zk-phi.github.io/")

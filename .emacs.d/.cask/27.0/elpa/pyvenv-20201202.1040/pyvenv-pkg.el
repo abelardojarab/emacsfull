@@ -1,2 +1,0 @@
-;;; Generated package description from /home/abelardojara/workspace/emacs-config/.emacs.d/.cask/27.0/elpa/pyvenv-20201202.1040/pyvenv.el  -*- no-byte-compile: t -*-
-(define-package "pyvenv" "20201202.1040" "Python virtual environment interface" 'nil :commit "0bf4b87068e9040fc99afa85af1992247dd7aacd" :keywords '("python" "virtualenv" "tools") :authors '(("Jorgen Schaefer" . "contact@jorgenschaefer.de")) :maintainer '("Jorgen Schaefer" . "contact@jorgenschaefer.de") :url "http://github.com/jorgenschaefer/pyvenv")

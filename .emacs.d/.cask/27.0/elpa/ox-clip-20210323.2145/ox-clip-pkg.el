@@ -1,0 +1,2 @@
+;;; Generated package description from /home/abelardojara/workspace/emacs-config/.emacs.d/.cask/27.1/elpa/ox-clip-20210323.2145/ox-clip.el  -*- no-byte-compile: t -*-
+(define-package "ox-clip" "20210323.2145" "Cross-platform formatted copying for org-mode" '((org "8.2") (htmlize "0")) :commit "2095537695135c7f1bc19db043925eb7d482907b" :authors '(("John Kitchin" . "jkitchin@andrew.cmu.edu")) :maintainer '("John Kitchin" . "jkitchin@andrew.cmu.edu") :keywords '("org-mode") :url "https://github.com/jkitchin/ox-clip")
