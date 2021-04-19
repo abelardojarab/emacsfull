@@ -21,6 +21,19 @@
 ;;; Commentary:
 
 ;;
+(defun custom-add-choice (variable choice)
+  "Add CHOICE to the custom type of VARIABLE.
+If a choice with the same tag already exists, no action is taken."
+  (let ((choices (get variable 'custom-type)))
+    (unless (eq (car choices) 'choice)
+      (error "Not a choice type: %s" choices))
+    (unless (seq-find (lambda (elem)
+                        (equal (caddr (member :tag elem))
+                               (caddr (member :tag choice))))
+                      (cdr choices))
+      ;; Put the new choice at the end.
+      (put variable 'custom-type
+           (append choices (list choice))))))
 
 (defun -const (c)
   "Return a function that returns C ignoring any additional arguments.
