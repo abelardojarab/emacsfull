@@ -87,6 +87,11 @@
                         (error)))
               item))
   :config (progn
+            (add-hook 'lsp-mode-hook
+                      (lambda ()
+                        (setq-local company-format-margin-function
+                                    #'company-vscode-dark-icons-margin)))
+
             (setq read-process-output-max (* 1024 1024 10))
             (setq lsp-completion-provider :capf)
 
