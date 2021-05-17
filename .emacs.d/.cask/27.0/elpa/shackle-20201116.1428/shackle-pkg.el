@@ -1,2 +1,0 @@
-;;; Generated package description from /home/abelardojara/workspace/emacs-config/.emacs.d/.cask/27.0/elpa/shackle-20201116.1428/shackle.el  -*- no-byte-compile: t -*-
-(define-package "shackle" "20201116.1428" "Enforce rules for popups" '((cl-lib "0.5")) :commit "1c88d2a2fdd2efb3e990da69d6fedeaee5ff71a2" :keywords '("convenience") :authors '(("Vasilij Schneidermann" . "mail@vasilij.de")) :maintainer '("Vasilij Schneidermann" . "mail@vasilij.de") :url "https://depp.brause.cc/shackle")

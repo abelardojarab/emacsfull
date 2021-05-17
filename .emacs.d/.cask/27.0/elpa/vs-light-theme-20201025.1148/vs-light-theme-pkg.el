@@ -1,2 +1,0 @@
-;;; Generated package description from /home/abelardojara/workspace/emacs-config/.emacs.d/.cask/27.0/elpa/vs-light-theme-20201025.1148/vs-light-theme.el  -*- no-byte-compile: t -*-
-(define-package "vs-light-theme" "20201025.1148" "Visual Studio IDE light theme" '((emacs "24.1")) :commit "4e6501118bafb62ecfca8797b6c6d81310d95fd2" :authors '(("Jen-Chieh Shen")) :maintainer '("Jen-Chieh Shen") :url "https://github.com/jcs090218/vs-light-theme")

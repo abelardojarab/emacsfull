@@ -1,0 +1,4 @@
+
+In anaconda-mode:
+anaconda-mode.el:755:70:Warning: assignment to free variable
+    ‘url-http-attempt-keepalives’

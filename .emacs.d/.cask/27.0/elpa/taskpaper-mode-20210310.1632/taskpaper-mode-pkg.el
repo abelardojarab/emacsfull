@@ -1,2 +1,0 @@
-;;; Generated package description from /home/abelardojara/workspace/emacs-config/.emacs.d/.cask/27.1/elpa/taskpaper-mode-20210310.1632/taskpaper-mode.el  -*- no-byte-compile: t -*-
-(define-package "taskpaper-mode" "20210310.1632" "Major mode for working with TaskPaper files" 'nil :commit "d6edb345f31a13918d603d44b90a4ce30b34632b" :authors '(("Dmitry Safronov" . "saf.dmitry@gmail.com")) :maintainer '("Dmitry Safronov" . "saf.dmitry@gmail.com") :keywords '("outlines" "notetaking" "task management" "productivity" "taskpaper") :url "https://github.com/saf-dmitry/taskpaper-mode")

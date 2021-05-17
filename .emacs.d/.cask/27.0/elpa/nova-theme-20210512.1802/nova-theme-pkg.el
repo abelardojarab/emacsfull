@@ -1,0 +1,2 @@
+;;; Generated package description from /home/abelardojara/workspace/emacs-config/.emacs.d/.cask/27.1/elpa/nova-theme-20210512.1802/nova-theme.el  -*- no-byte-compile: t -*-
+(define-package "nova-theme" "20210512.1802" "A dark, pastel color theme" '((emacs "24.3")) :commit "1498f756a4c1c9ea9740cd3208f74d071283b930" :authors '(("Muir Manders" . "muir+emacs@mnd.rs")) :maintainer '("Muir Manders" . "muir+emacs@mnd.rs") :keywords '("theme" "dark" "nova" "pastel" "faces") :url "https://github.com/muirmanders/emacs-nova-theme")
