@@ -118,10 +118,11 @@
 
 ;; Breadcrumbs (conflicts with tabbar)
 (use-package lsp-headerline
+  :defer t
   :commands lsp-headerline-breadcrumb-mode
-  :config (progn
-            (setq lsp-headerline-breadcrumb-enable nil)
-            (setq lsp-headerline-breadcrumb-segments '(project file symbols))))
+  :custom ((lsp-headerline-breadcrumb-enable nil)
+           (lsp-headerline-breadcrumb-icons-enable t))
+  :config (setq lsp-headerline-breadcrumb-segments '(project file symbols)))
 
 ;; Enable lsp-clients
 (use-package lsp-clients
