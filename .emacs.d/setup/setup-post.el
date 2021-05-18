@@ -190,5 +190,9 @@
 (if (version< emacs-version "27.1")
     (my/set-face-tabbar))
 
+;; Fixes
+(setq tramp-gvfs-enabled nil)
+(defun helm--maybe-load-tramp-archive () nil)
+
 (provide 'setup-post)
 ;;; setup-post.el ends here
