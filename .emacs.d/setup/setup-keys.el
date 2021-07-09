@@ -65,13 +65,11 @@
        (executable-find "kdialog"))
   (define-key menu-bar-file-menu [open-file] '("Open File..." . kde-open-file))) ;; if
 
- ;; Mac
- ;; ((equal system-type 'darwin)
- ;;  (global-set-key "\C-x\C-f" 'mac-open-file)
- ;;  (define-key menu-bar-file-menu [open-file] '("Open File..." . mac-open-file))) ;; if
-
  (t
   nil)) ;; cond
+
+;; don't want ESC as a modifier
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
 ;; Treat 'y' or <CR> as yes, 'n' as no.
 (fset 'yes-or-no-p 'y-or-n-p)

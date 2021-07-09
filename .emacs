@@ -1,5 +1,5 @@
 ;; -*-mode: Emacs-Lisp; -*-
-;; Copyright (C) 1996-2020 Abelardo Jara-Berrocal
+;; Copyright (C) 1996-2021 Abelardo Jara-Berrocal
 ;; URL: https://jaraberrocal.readmyblog.org
 ;; This file is free software licensed under the terms of the
 ;; GNU General Public License, version 3 or later.

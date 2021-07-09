@@ -1,6 +1,6 @@
 ;;; setup-general.el ---                               -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2014-2020  Abelardo Jara-Berrocal
+;; Copyright (C) 2014-2021  Abelardo Jara-Berrocal
 
 ;; Author: Abelardo Jara-Berrocal <abelardojara@ubuntu02>
 ;; Keywords:
@@ -178,6 +178,7 @@
   :after elisp-refs
   :bind (([remap describe-function] . helpful-callable)
          ([remap describe-variable] . helpful-variable)
+         ([remap describe-command]  . helpful-command)
          ([remap describe-key]      . helpful-key)
          ("C-h f"                   . helpful-function)
          ("C-h c"                   . helpful-callable)
