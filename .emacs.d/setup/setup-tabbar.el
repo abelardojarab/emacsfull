@@ -29,7 +29,7 @@
   :if (version< emacs-version "27.3")
   :demand t
   :config (defadvice mode-icons-set-mode-icon (around bar activate)
-  (ignore-errors add-do-it)))
+            (ignore-errors add-do-it)))
 
 ;; Tabbar
 (use-package tabbar
@@ -128,7 +128,44 @@ That is, a string used to represent it on the tab bar."
   :init (tabbar-mode -1)
   :custom ((tab-line-close-button-show t)
            (tab-line-new-button-show   nil)
-           (tab-line-separator         "")))
+           (tab-line-separator         ""))
+  :config (progn
+            (when (display-graphic-p)
+              (defcustom tab-line-tab-min-width 10
+                "Minimum width of a tab in characters."
+                :type 'integer
+                :group 'tab-line)
+
+              (defcustom tab-line-tab-max-width 30
+                "Maximum width of a tab in characters."
+                :type 'integer
+                :group 'tab-line)
+
+              (defun my/tab-line-name-buffer (buffer &rest _buffers)
+                (tabbar-mode -1)
+                (with-current-buffer buffer
+                  (let* ((window-width (window-width (get-buffer-window)))
+                         (close-button-size (if tab-line-close-button-show
+                                                (length (substring-no-properties tab-line-close-button))
+                                              0))
+                         (tab-amount (length (tab-line-tabs-window-buffers)))
+                         (window-max-tab-width (/ window-width tab-amount))
+                         (tab-width (- (cond ((>= window-max-tab-width tab-line-tab-max-width)
+                                              tab-line-tab-max-width)
+                                             ((< window-max-tab-width tab-line-tab-min-width)
+                                              tab-line-tab-min-width)
+                                             (t window-max-tab-width))
+                                       close-button-size))
+                         (buffer-name (string-trim (buffer-name)))
+                         (name-width (length buffer-name)))
+                    (if (>= name-width (- tab-width 3))
+                        (concat  " " (truncate-string-to-width buffer-name (- tab-width 3)) "… ")
+                      (let* ((padding (make-string (/ (- tab-width name-width) 2) ?\s))
+                             (buffer-name (concat padding buffer-name))
+                             (name-width (length buffer-name)))
+                        (concat buffer-name (make-string (- tab-width name-width) ?\s)))))))
+
+              (setq tab-line-tab-name-function #'my/tab-line-name-buffer))))
 
 (provide 'setup-tabbar)
 ;;; setup-tabbar.el ends here
