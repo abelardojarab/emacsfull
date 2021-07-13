@@ -127,19 +127,66 @@ That is, a string used to represent it on the tab bar."
   :hook (after-init . global-tab-line-mode)
   :init (tabbar-mode -1)
   :custom ((tab-line-close-button-show t)
-           (tab-line-new-button-show   nil)
+           (tab-line-new-button-show   t)
            (tab-line-separator         ""))
   :config (progn
-            (when (display-graphic-p)
-              (defcustom tab-line-tab-min-width 10
-                "Minimum width of a tab in characters."
-                :type 'integer
-                :group 'tab-line)
+            (defcustom tab-line-tab-min-width 10
+              "Minimum width of a tab in characters."
+              :type 'integer
+              :group 'tab-line)
+            (defcustom tab-line-tab-max-width 30
+              "Maximum width of a tab in characters."
+              :type 'integer
+              :group 'tab-line)
 
-              (defcustom tab-line-tab-max-width 30
-                "Maximum width of a tab in characters."
-                :type 'integer
-                :group 'tab-line)
+            (when (display-graphic-p)
+              (setq tab-line-new-button
+                    (propertize " + "
+                                'display `(image :type xpm
+                                                 :file ,(image-search-load-path
+                                                         "new@2x.xpm")
+                                                 :margin (2 . 0)
+                                                 :ascent center
+                                                 :scale 0.75)
+                                'keymap tab-line-add-map
+                                'mouse-face 'tab-line-highlight
+                                'help-echo "Click to add tab"))
+
+              (setq tab-line-close-button
+                    (propertize " x"
+                                'display `(image :type xpm
+                                                 :file ,(image-search-load-path
+                                                         "close@2x.xpm")
+                                                 :margin (2 . 0)
+                                                 :ascent center
+                                                 :scale 0.75)
+                                'keymap tab-line-tab-close-map
+                                'mouse-face 'tab-line-close-highlight
+                                'help-echo "Click to close tab"))
+
+              (setq tab-line-left-button
+                    (propertize " <"
+                                'display `(image :type xpm
+                                                 :file ,(image-search-load-path
+                                                         "left-arrow@2x.xpm")
+                                                 :margin (2 . 0)
+                                                 :ascent center
+                                                 :scale 0.75)
+                                'keymap tab-line-left-map
+                                'mouse-face 'tab-line-highlight
+                                'help-echo "Click to scroll left"))
+
+              (setq tab-line-right-button
+                    (propertize "> "
+                                'display `(image :type xpm
+                                                 :file ,(image-search-load-path
+                                                         "right-arrow@2x.xpm")
+                                                 :margin (2 . 0)
+                                                 :ascent center
+                                                 :scale 0.75)
+                                'keymap tab-line-right-map
+                                'mouse-face 'tab-line-highlight
+                                'help-echo "Click to scroll right"))
 
               (defun my/tab-line-name-buffer (buffer &rest _buffers)
                 (tabbar-mode -1)
